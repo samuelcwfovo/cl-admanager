@@ -69,7 +69,7 @@ const AdGroup = (props: AdGroupProps) => {
     }
 
     const handleCountinue = () => {
-        onNext()
+        props.onNext()
     }
 
     return (

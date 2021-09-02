@@ -78,7 +78,7 @@ const Campaign = (props: CampaignProps) => {
 
 
         if (pass) {
-            onNext()
+            props.onNext()
         }
 
     }
