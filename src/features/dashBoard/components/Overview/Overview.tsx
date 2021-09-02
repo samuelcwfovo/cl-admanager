@@ -25,7 +25,7 @@ const Chart: React.FC<ChartProps> = React.memo(({ labels, datas }) => {
                 backgroundColor: '#38D1B3',
                 borderColor: '#9CE8D9',
             },
-        ],
+        ], 
     };
 
     const options = {

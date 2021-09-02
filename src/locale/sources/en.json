@@ -138,6 +138,57 @@
             "cost": "Cost per result",
             "amount": "Amount spent",
             "end": "Ends"
+        },
+        "campaignFoot": {
+            "result" : "Result from {{count}} campaign",
+            "reached": "People reached",
+            "total": "Total",
+            "totalSpent": "Total spent"
+        },
+        "widget": {
+            "campaign": {
+                "new": "New Campaign",
+                "existing": "Existing Campaign",
+                "name": "Campaign Name",
+                "type": "Campaign Type",
+                "external": "Land to external website URL",
+                "internal": "Promote your assets on Carlig",
+                "objective": "Campaign Objective",
+                "awareness": "Awareness",
+                "traffic": "Traffic",
+                "engagement": "Engagement",
+                "awarenessDetail": "To raise awareness and visibility of your brands, produucts or services",
+                "trafficDetail": "To drive people to a destination, like a website, app or a page on Carlig.",
+                "engagementDetail" : "To get people to interact with you at the ad's destination"
+            },
+            "adGroup": {
+                "new": "New Ad Group",
+                "existing": "Existing Ad Group",
+                "name": "Ad Group Name",
+                "period": "Period",
+                "startdate": "Start Date",
+                "setEndDate": "Set end date",
+                "advance": "Advance",
+                "device": "Device Type",
+                "desktop": "Desktop",
+                "mobile": "Mobile + Tablet",
+                "region": "Region",
+                "targeting": "Targeting",
+                "budget": "Budget",
+                "budgetDetail": "The default buying type is auction buying. Our system will set bids automatically based on your campaign objective.",
+                "budgetType": "Budget Type",
+                "singleAd": "Single Ad",
+                "Amount": "Amount",
+                "byDay" : "By Day",
+                "allTime": "All Time",
+                "format": "Format",
+                "display": "Display",
+                "search": "Search",
+                "searchDetail": "This format includes all the placements appearing on Carlig's homepage and content pages."
+            },
+            "continue": "Continue",
+            "previouis": "Previous page"
         }
     }
+
 }

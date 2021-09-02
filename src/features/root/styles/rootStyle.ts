@@ -13,6 +13,7 @@ export const NavMainDiv = styled.div`
     position: sticky;
     top: 0;
     border-bottom: solid .1rem ${color.ROOT.NAV_BORDER};
+    z-index: 10;
 `
 
 export const NavBarDiv = styled.div`

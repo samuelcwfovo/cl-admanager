@@ -150,86 +150,87 @@ const PaymnetEdit = (props: Props) => {
 
     return (
         <>
-            <DrakBgFilterDiv />
-            <AbsoluteCenterDiv>
-                <SectionDiv>
-                    <SectionHeader>
-                        <div>{props.cardId ? t('bill.modifyHeader') : t('bill.newCardHeader')}</div>
-                    </SectionHeader>
-                    <SectionDetail>
-                        <SameLineWrapperDiv>
-                            <div>
-                                <h4>{t('bill.cardNo')}</h4>
-                                <FormInput
-                                    style={{ width: '28rem', marginRight: '3rem' }}
-                                    value={cardNo}
-                                    isInvalid={cardError}
-                                    onChange={onCardChanged}
-                                    placeholder='0000 0000 0000 0000'
-                                />
-                            </div>
-                            <div>
-                                <h4>{t('bill.cardHolder')}</h4>
-                                <FormInput
-                                    style={{ width: '23rem' }}
-                                    value={holder}
-                                    isInvalid={holderError}
-                                    onChange={onHolderChanged}
-                                    placeholder={t('bill.placeHolder.cardHolder')}
-                                />
-                            </div>
-                        </SameLineWrapperDiv>
-                        <SameLineWrapperDiv>
-                            <div>
-                                <h4>{t('bill.expiryDate')}</h4>
-                                <SameLineWrapperDiv>
+            <DrakBgFilterDiv>
+                <AbsoluteCenterDiv>
+                    <SectionDiv>
+                        <SectionHeader>
+                            <div>{props.cardId ? t('bill.modifyHeader') : t('bill.newCardHeader')}</div>
+                        </SectionHeader>
+                        <SectionDetail>
+                            <SameLineWrapperDiv>
+                                <div>
+                                    <h4>{t('bill.cardNo')}</h4>
                                     <FormInput
-                                        style={{ width: '4rem' }}
-                                        value={month}
-                                        isInvalid={monthError}
-                                        onChange={onMonthChanged}
-                                        placeholder={t('bill.placeHolder.MM')}
+                                        style={{ width: '28rem', marginRight: '3rem' }}
+                                        value={cardNo}
+                                        isInvalid={cardError}
+                                        onChange={onCardChanged}
+                                        placeholder='0000 0000 0000 0000'
                                     />
-                                    <div style={{ padding: "0 .5rem" }}>/</div>
+                                </div>
+                                <div>
+                                    <h4>{t('bill.cardHolder')}</h4>
                                     <FormInput
-                                        style={{ width: '4rem', marginRight: '3rem' }}
-                                        value={year}
-                                        isInvalid={yearError}
-                                        onChange={onYearChanged}
-                                        placeholder={t('bill.placeHolder.YY')}
+                                        style={{ width: '23rem' }}
+                                        value={holder}
+                                        isInvalid={holderError}
+                                        onChange={onHolderChanged}
+                                        placeholder={t('bill.placeHolder.cardHolder')}
                                     />
-                                </SameLineWrapperDiv>
-                            </div>
-                            <div>
-                                <h4>{t('bill.cvv')}</h4>
-                                <FormInput
-                                    type="password"
-                                    style={{ width: '28rem' }}
-                                    value={cvv}
-                                    isInvalid={cvvError}
-                                    onChange={onCvvChanged}
-                                    placeholder={t('bill.placeHolder.cvv')}
-                                />
-                            </div>
-                        </SameLineWrapperDiv>
+                                </div>
+                            </SameLineWrapperDiv>
+                            <SameLineWrapperDiv>
+                                <div>
+                                    <h4>{t('bill.expiryDate')}</h4>
+                                    <SameLineWrapperDiv>
+                                        <FormInput
+                                            style={{ width: '4rem' }}
+                                            value={month}
+                                            isInvalid={monthError}
+                                            onChange={onMonthChanged}
+                                            placeholder={t('bill.placeHolder.MM')}
+                                        />
+                                        <div style={{ padding: "0 .5rem" }}>/</div>
+                                        <FormInput
+                                            style={{ width: '4rem', marginRight: '3rem' }}
+                                            value={year}
+                                            isInvalid={yearError}
+                                            onChange={onYearChanged}
+                                            placeholder={t('bill.placeHolder.YY')}
+                                        />
+                                    </SameLineWrapperDiv>
+                                </div>
+                                <div>
+                                    <h4>{t('bill.cvv')}</h4>
+                                    <FormInput
+                                        type="password"
+                                        style={{ width: '28rem' }}
+                                        value={cvv}
+                                        isInvalid={cvvError}
+                                        onChange={onCvvChanged}
+                                        placeholder={t('bill.placeHolder.cvv')}
+                                    />
+                                </div>
+                            </SameLineWrapperDiv>
 
-                        <CheckBox
-                            label={t('bill.primaryPayment')}
-                            checked={isPrimary}
-                            onChange={(_, checked) => setPrimary(checked)}
-                        />
+                            <CheckBox
+                                label={t('bill.primaryPayment')}
+                                checked={isPrimary}
+                                onChange={(_, checked) => setPrimary(checked)}
+                            />
 
-                        <ButtonGroupDiv>
-                            <SaveButton onClick={handleSubmit}>
-                                {isLoading ? <CircularProgress size={18} />
-                                    : t('bill.confirm')
-                                }
-                            </SaveButton>
-                            <CancelButton onClick={handleCancel}>{t('bill.cancel')}</CancelButton>
-                        </ButtonGroupDiv>
-                    </SectionDetail>
-                </SectionDiv>
-            </AbsoluteCenterDiv>
+                            <ButtonGroupDiv>
+                                <SaveButton onClick={handleSubmit}>
+                                    {isLoading ? <CircularProgress size={18} />
+                                        : t('bill.confirm')
+                                    }
+                                </SaveButton>
+                                <CancelButton onClick={handleCancel}>{t('bill.cancel')}</CancelButton>
+                            </ButtonGroupDiv>
+                        </SectionDetail>
+                    </SectionDiv>
+                </AbsoluteCenterDiv>
+            </DrakBgFilterDiv>
         </>
     )
 }
