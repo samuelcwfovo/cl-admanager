@@ -43,11 +43,11 @@ const AllCampaign = () => {
     const renderCreate = () => {
         if (campaignBox.shouldOpen) {
             if (createTap == 'campaign')
-                return <Campaign onClose={handleBoxClose} onNext={setCreateTap('campaign')} />
+                return <Campaign onClose={handleBoxClose} onNext={() => setCreateTap('campaign')} />
             if (createTap == 'adGroup')
-                return <AdGroup onClose={handleBoxClose} onNext={setCreateTap('adGroup')} />
+                return <AdGroup onClose={handleBoxClose} onNext={() => setCreateTap('adGroup')} />
             if (createTap == 'ad')
-                return <Ad onClose={handleBoxClose} onNext={setCreateTap('ad')} />
+                return <Ad onClose={handleBoxClose} />
 
         }
     }
