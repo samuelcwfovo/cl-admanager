@@ -37,6 +37,7 @@ const CampaignObjectDetail = ({ icon, title, description }: CampaignObjectDetail
 
 type CampaignProps = {
     onClose: () => void;
+    onNext: () => void;
 }
 
 const Campaign = (props: CampaignProps) => {
@@ -76,6 +77,9 @@ const Campaign = (props: CampaignProps) => {
         if (!name) { setNameError(true); pass = false; };
 
 
+        if (pass) {
+            onNext()
+        }
 
     }
 
@@ -88,7 +92,7 @@ const Campaign = (props: CampaignProps) => {
                         <TapContentDiv isActive={tap === 'exist'} onClick={() => setTap('exist')}>{t('dashBoard.widget.campaign.existing')}</TapContentDiv>
                     </TapGroupDiv>
                     <CloseButtonDiv>
-                        <CloseOutlined onClick={props.onClose}/>
+                        <CloseOutlined onClick={props.onClose} />
                     </CloseButtonDiv>
                 </TapDiv>
                 <WidgetContainerDiv>

@@ -69,7 +69,7 @@ const Root = ({ children }: Props) => {
         <RootDiv>
             <NavMainDiv ref={navRef}>
                 <NavBarDiv>
-                    <LogoDiv>
+                    <LogoDiv onClick={()=>{history.push('/')}}>
                         <img src={logoPath} />
                         <h4> Ad manager</h4>
                     </LogoDiv>

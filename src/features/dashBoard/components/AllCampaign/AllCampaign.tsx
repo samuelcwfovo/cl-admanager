@@ -33,14 +33,28 @@ const AllCampaign = () => {
     const [selectedTab, setTab] = useState<number>(0);
     const [rows] = useAllCampaign();
     const [campaignBox, setCampaignBox] = useState<CampaignBox>({ shouldOpen: false });
+    const [createTap, setCreateTap] = useState<string>('campaign');
 
     const handleBoxClose = () => {
         setCampaignBox({ shouldOpen: false })
     }
 
+
+    const renderCreate = () => {
+        if (campaignBox.shouldOpen) {
+            if (createTap == 'campaign')
+                return <Campaign onClose={handleBoxClose} onNext={setCreateTap('campaign')} />
+            if (createTap == 'adGroup')
+                return <AdGroup onClose={handleBoxClose} onNext={setCreateTap('adGroup')} />
+            if (createTap == 'ad')
+                return <Ad onClose={handleBoxClose} onNext={setCreateTap('ad')} />
+
+        }
+    }
+
     return (
         <>
-            {campaignBox.shouldOpen ? <Ad onClose={handleBoxClose}/> : null}
+            {renderCreate()}
             <div style={{ paddingBottom: '5rem' }}>
                 <HeaderDiv>{t('dashBoard.allCampaign')}</HeaderDiv>
                 <CustomTabsDiv>

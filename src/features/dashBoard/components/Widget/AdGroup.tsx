@@ -25,6 +25,7 @@ import RoundedRadioButton from "common/components/Rounded/RoundedRadioButton";
 
 type AdGroupProps = {
     onClose: () => void;
+    onNext: () => void;
 }
 
 const AdGroup = (props: AdGroupProps) => {
@@ -68,7 +69,7 @@ const AdGroup = (props: AdGroupProps) => {
     }
 
     const handleCountinue = () => {
-
+        onNext()
     }
 
     return (
